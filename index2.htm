@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo PROLIM</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.webp" alt="PROLIM Logo" class="logo-img">
+    </div>
+    <h1>Catálogo de Productos PROLIM</h1>
+    <p>Soluciones de limpieza de calidad para tu hogar y negocio</p>
+  </header>
+
+  <!-- Botón para ver el carrito -->
+  <button id="verCarritoBtn" class="carrito-btn">Ver Carrito</button>
+
+  <!-- Contenedor de categorías -->
+  <section class="categorias" id="categorias"></section>
+
+  <!-- Contenedor del catálogo de productos -->
+  <section class="catalogo" id="catalogo"></section>
+
+  <!-- Modal del carrito -->
+  <div id="carritoModal" class="modal">
+    <div class="modal-contenido">
+      <!-- Tacha en la parte superior derecha para cerrar el modal -->
+      <span id="cerrarModalBtn" class="cerrar-btn">&times;</span>
+      <h2>Carrito de Compras</h2>
+      <ul id="carrito-resumen"></ul>
+      <p><strong>Total: $<span id="precio-total">0.00</span></strong></p>
+      <button id="vaciar-carrito">Vaciar Carrito</button>
+      <form id="formulario-compra">
+        <h3>Formulario de compra</h3>
+        <input type="text" id="nombre" placeholder="Nombre completo" required>
+        <input type="text" id="direccion" placeholder="Dirección de entrega" required>
+        <input type="tel" id="telefono" placeholder="Teléfono de contacto" required>
+        <input type="email" id="correo" placeholder="Correo electrónico" required>
+        <select id="forma-pago">
+          <option value="tarjeta">Tarjeta</option>
+          <option value="transferencia">Transferencia</option>
+          <option value="efectivo">Efectivo</option>
+        </select>
+        <button type="submit">Enviar Orden</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Mensaje temporal de confirmación de producto agregado -->
+  <div id="mensajeConfirmacion" class="mensaje-confirmacion">¡Producto agregado al carrito!</div>
+
+  <footer>
+    <p>&copy; 2025 PROLIM | Todos los derechos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
